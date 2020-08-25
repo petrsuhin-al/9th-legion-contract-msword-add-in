@@ -1,8 +1,8 @@
-import * as React from "react";
-import { Button, ButtonType } from "office-ui-fabric-react";
-import Header from "./Header";
-import HeroList, { HeroListItem } from "./HeroList";
-import Progress from "./Progress";
+import * as React from 'react';
+import { Button, ButtonType } from 'office-ui-fabric-react';
+import Header from './Header';
+import HeroList, { HeroListItem } from './HeroList';
+import Progress from './Progress';
 /* global Button Header, HeroList, HeroListItem, Progress, Word */
 
 export interface AppProps {
@@ -26,36 +26,34 @@ export default class App extends React.Component<AppProps, AppState> {
     this.setState({
       listItems: [
         {
-          icon: "Ribbon",
-          primaryText: "Achieve more with Office integration"
+          icon: 'Ribbon',
+          primaryText: 'Achieve more with Office integration'
         },
         {
-          icon: "Unlock",
-          primaryText: "Unlock features and functionality"
+          icon: 'Unlock',
+          primaryText: 'Unlock features and functionality'
         },
         {
-          icon: "Design",
-          primaryText: "Create and visualize like a pro"
+          icon: 'Design',
+          primaryText: 'Create and visualize like a pro'
         }
       ]
     });
   }
 
-  click = async () => {
-    return Word.run(async context => {
+  click = async () => Word.run(async (context) => {
       /**
        * Insert your Word code here
        */
 
       // insert a paragraph at the end of the document.
-      const paragraph = context.document.body.insertParagraph("Hello World", Word.InsertLocation.end);
+      const paragraph = context.document.body.insertParagraph('Hello World', Word.InsertLocation.end);
 
       // change the paragraph color to blue.
-      paragraph.font.color = "blue";
+      paragraph.font.color = 'blue';
 
       await context.sync();
     });
-  };
 
   render() {
     const { title, isOfficeInitialized } = this.props;
@@ -68,15 +66,15 @@ export default class App extends React.Component<AppProps, AppState> {
 
     return (
       <div className="ms-welcome">
-        <Header logo="assets/logo-filled.png" title={this.props.title} message="Welcome" />
-        <HeroList message="Discover what Office Add-ins can do for you today!" items={this.state.listItems}>
+        <Header logo="assets/logo-filled.png" title={this.props.title} message="Автозаполнение данных договора" />
+        <HeroList message="Введите данные клиента" items={this.state.listItems}>
           <p className="ms-font-l">
             Modify the source files, then click <b>Run</b>.
           </p>
           <Button
             className="ms-welcome__action"
             buttonType={ButtonType.hero}
-            iconProps={{ iconName: "ChevronRight" }}
+            iconProps={{ iconName: 'ChevronRight' }}
             onClick={this.click}
           >
             Run

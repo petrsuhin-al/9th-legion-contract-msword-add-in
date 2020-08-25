@@ -1,5 +1,5 @@
 {
-  "name": "office-addin-taskpane-react",
+  "name": "9th-legion-contract-msword-add-in",
   "version": "0.0.1",
   "repository": {
     "type": "git",
@@ -73,7 +73,12 @@
     "typescript": "^3.9.5",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "eslint-plugin-react-hooks": "^4.1.0",
+    "eslint-plugin-import": "^2.22.0",
+    "@typescript-eslint/eslint-plugin": "^3.10.1",
+    "@typescript-eslint/parser": "^3.10.1",
+    "eslint": "^7.7.0"
   },
   "prettier": "office-addin-prettier-config"
 }
