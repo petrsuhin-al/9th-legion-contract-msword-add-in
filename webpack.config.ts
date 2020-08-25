@@ -1,8 +1,8 @@
-import * as devCerts from 'office-addin-dev-certs';
+import { getHttpsServerOptions } from 'office-addin-dev-certs';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
-import * as CopyWebpackPlugin from 'copy-webpack-plugin';
-import * as ExtractTextPlugin from 'extract-text-webpack-plugin';
-import * as HtmlWebpackPlugin from 'html-webpack-plugin';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 import * as webpack from 'webpack';
 import { ServerOptions } from 'https';
 
@@ -92,7 +92,7 @@ module.exports = async (_: any, options: Options): Promise<webpack.Configuration
     headers: {
       'Access-Control-Allow-Origin': '*'
     },
-    https: (options.https !== undefined) ? options.https : await devCerts.getHttpsServerOptions(),
+    https: (options.https !== undefined) ? options.https : await getHttpsServerOptions(),
     port: Number(process.env.npm_package_config_dev_server_port) || 3000
   }
 });

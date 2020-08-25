@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "https://github.com/OfficeDev/Office-Addin-TaskPane-React.git"
+    "url": "https://github.com/al-petrushin/9th-legion-contract-msword-add-in"
   },
   "license": "MIT",
   "config": {
