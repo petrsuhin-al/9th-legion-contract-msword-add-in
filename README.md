@@ -2,6 +2,9 @@
 
 This repository contains the source code used by the [Yo Office generator](https://github.com/OfficeDev/generator-office) when you create a new Office Add-in that appears in the task pane. You can also use this repository as a sample to base your own project from if you choose not to use the generator. 
 
+## Design
+https://www.figma.com/file/IOaDos5TmVGsNLufpBAEv2/addin?node-id=3%3A2
+
 ## TypeScript
 
 This template is written using [TypeScript](http://www.typescriptlang.org/). For the JavaScript version of this template, go to [Office-Addin-TaskPane-React-JS](https://github.com/OfficeDev/Office-Addin-TaskPane-React-JS).
